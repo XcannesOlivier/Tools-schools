@@ -1,0 +1,306 @@
+/* ------------------------------ */
+/* 🔧 RESET + BASE TYPOGRAPHIE     */
+/* ------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #000000;
+}
+
+/* ------------------------------ */
+/* 🏠 HEADER                      */
+/* ------------------------------ */
+
+.main-header {
+  background: rgb(31, 29, 29);
+  color: #f56504;
+  padding: 1rem 0;
+  padding-left: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo h1 a {
+  color: #f56504;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo h1 a:hover {
+  color: #918f8f;
+  transition: color 0.3s ease;
+}
+
+.main-header .logo h1 a {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: rgb(63, 62, 62);
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-back:hover {
+  background-color: #5a67d8;
+  transform: translateY(-2px);
+}
+
+
+/* ------------------------------ */
+/* 📦 CONTENEUR PRINCIPAL         */
+/* ------------------------------ */
+
+main {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- TITRES DE PAGES --- */
+main h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #aaaeb3;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #667eea;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+main h3 {
+  text-align: center;
+  color: #e2e1e1;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0.8rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.4px;
+}
+
+
+/* ------------------------------ */
+/* 🧩 FLEX CONTAINER (grille)     */
+/* ------------------------------ */
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* --- LAYOUT SPÉCIFIQUE POUR LES PAGES DE MODULE --- */
+.service-container.row {
+  display: flex;
+  flex-direction: column;
+  /* aligne en ligne */
+  justify-content: center;
+  /* centre le tout */
+  align-items: stretch;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  /* pas de retour à la ligne */
+  padding: 2rem;
+  overflow-x: auto;
+  /* scroll horizontal si écran trop petit */
+}
+
+/* --- Ajuste les cartes pour ce format horizontal --- */
+.service-container.row .service {
+  width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* --- Responsive : sur mobile, repasse en colonne --- */
+@media (max-width: 768px) {
+  .service-container.row {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* ------------------------------ */
+/* 🧱 STYLE DES CARTES (services) */
+/* ------------------------------ */
+
+.service {
+  background: rgb(31, 29, 29);
+  width: 270px;
+  padding: 1.8rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #f56504;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #764ba2;
+}
+
+/* ------------------------------ */
+/* 🎯 TITRES ET PARAGRAPHES       */
+/* ------------------------------ */
+
+.service h1,
+.service h2 {
+  color: #f56504;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  border-bottom: 2px solid #f56504;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+.service h1 {
+  font-size: 1.6rem;
+}
+
+.service h2 {
+  font-size: 1.3rem;
+}
+
+.service h2 a {
+  color: #f56504;
+  /* couleur de base */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 700;
+}
+
+.service p {
+  color: #d4d1d1;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 0.5rem;
+}
+
+/* ------------------------------ */
+/* 🧭 HTML PAGES X13              */
+/* ------------------------------ */
+
+.btn {
+  display: inline-block;
+  background: rgb(63, 62, 62);
+  color: #d4d1d1;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+}
+
+/* --- Liens dans les sections --- */
+.links {
+  list-style: none;
+  margin-top: 0.8rem;
+  text-align: left;
+}
+
+.links li {
+  margin: 0.4rem 0;
+}
+
+.links a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+
+
+/* ------------------------------ */
+/* 🧭 FOOTER                      */
+/* ------------------------------ */
+
+footer {
+  background-color: rgb(31, 29, 29);
+  color: #d4d1d1;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ------------------------------ */
+/* 📱 RESPONSIVE DESIGN           */
+/* ------------------------------ */
+
+@media (max-width: 1024px) {
+  .service {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo h1 a {
+    font-size: 1.6rem;
+  }
+
+  .service-container {
+    padding: 1rem;
+  }
+
+  .service {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .service {
+    padding: 1rem;
+  }
+
+  .service h1 {
+    font-size: 1.3rem;
+  }
+
+  .service h2 {
+    font-size: 1.1rem;
+  }
+
+  .service p {
+    font-size: 0.9rem;
+  }
+}

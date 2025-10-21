@@ -135,6 +135,39 @@ main h3 {
   text-align: center;
 }
 
+.section-separator {
+  border: none;
+  height: 2px;
+  width: 80%;
+  margin: 3rem auto;
+  /* espace autour de la ligne */
+  background: linear-gradient(to right, transparent, #f56504, transparent);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+.section-title {
+  text-align: center;
+  color: #f56504;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 3px solid #f56504;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+
+
 /* --- Responsive : sur mobile, repasse en colonne --- */
 @media (max-width: 768px) {
   .service-container.row {
